@@ -1,0 +1,130 @@
+/* styles.css */
+
+/* أنيميشن لنزول النص "مرحباً بك في موقع أيوب" */
+.welcome-text {
+    opacity: 0;
+    animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* تصميم النموذج */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* قائمة المستخدم بعد التسجيل */
+#userDashboard {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#userDashboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#userDashboard li {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#userDashboard li:hover {
+    background-color: #ddd;
+}
+
+#userDashboard i {
+    font-size: 20px;
+}
+
+/* نافذة الإعدادات */
+#settingsModal {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#settingsModal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#settingsModal li {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#settingsModal li:hover {
+    background-color: #ddd;
+}
+
+#settingsModal i {
+    font-size: 20px;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode #userDashboard li {
+    background-color: #333;
+}
+
+.dark-mode #settingsModal li {
+    background-color: #333;
+}
